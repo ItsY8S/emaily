@@ -5,5 +5,6 @@ app.get('/', (req, res) => {
   res.send({ hi: 'there' })
 })
 
-// App is listening on port 5000
-app.listen(5000)
+// App is listening on Heroku port or 5000 locally
+const PORT = process.env.PORT || 5000
+app.listen(PORT)
