@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 
 app.get('/', (req, res) => {
-  res.send({ hi: 'there' })
+  res.send({ testing: 'new change' })
 })
 
 // App is listening on Heroku port or 5000 locally
