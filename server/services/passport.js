@@ -20,7 +20,8 @@ passport.use(
     {
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
-      callbackURL: '/auth/google/callback'
+      callbackURL: '/auth/google/callback',
+      proxy: true
     },
     async (token, tokenSecret, profile, done) => {
       const existingUser = await User.findOne({ googleId: profile.id })
@@ -40,7 +41,8 @@ passport.use(
     {
       consumerKey: keys.twitterClientID,
       consumerSecret: keys.twitterClientSecret,
-      callbackURL: '/auth/twitter/callback'
+      callbackURL: '/auth/twitter/callback',
+      proxy: true
     },
     async (accessToken, refreshToken, profile, done) => {
       const existingUser = await User.findOne({
