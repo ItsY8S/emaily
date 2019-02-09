@@ -8,14 +8,16 @@ import SurveyNew from './SurveyNew'
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <>
-          <Header />
-          <Route exact path="/" component={Landing} />
-          <Route exact path="/surveys" component={Dashboard} />
-          <Route path="/surveys/new" component={SurveyNew} />
-        </>
-      </BrowserRouter>
+      <div className="container">
+        <BrowserRouter>
+          <>
+            <Header />
+            <Route exact path="/" component={Landing} />
+            <Route exact path="/surveys" component={Dashboard} />
+            <Route path="/surveys/new" component={SurveyNew} />
+          </>
+        </BrowserRouter>
+      </div>
     )
   }
 }
