@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import Stripe from './Stripe'
 
 class Header extends React.Component {
   renderContent() {
@@ -15,9 +16,14 @@ class Header extends React.Component {
         )
       default:
         return (
-          <li>
-            <a href="/api/logout">Logout</a>
-          </li>
+          <>
+            <li>
+              <Stripe />
+            </li>
+            <li>
+              <a href="/api/logout">Logout</a>
+            </li>
+          </>
         )
     }
   }
