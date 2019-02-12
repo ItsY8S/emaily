@@ -3,7 +3,11 @@ const { Schema } = mongoose
 
 const userSchema = new Schema({
   googleId: String,
-  twitterId: String
+  twitterId: String,
+  credits: {
+    type: Number,
+    default: 0
+  }
 })
 
 mongoose.model('users', userSchema)
